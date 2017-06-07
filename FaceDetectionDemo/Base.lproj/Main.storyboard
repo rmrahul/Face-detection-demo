@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetectionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjR-vk-uXF">
+                                <rect key="frame" x="99" y="461" width="176" height="50"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.82352941180000006" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DcN-Za-UCD"/>
+                                </constraints>
+                                <state key="normal" title="SELECT PHOTO"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-Vh-oR1">
+                                <rect key="frame" x="99" y="538" width="176" height="50"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.82352941180000006" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tDZ-hW-IQw"/>
+                                </constraints>
+                                <state key="normal" title="DETECT"/>
+                                <connections>
+                                    <action selector="btnDetectClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTl-44-m5H"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dravid-samit-anvay_1460450495.jpg" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-XM-SDr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="416" id="o09-pb-XE1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eV9-Vh-oR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="83" id="3wX-Lm-gzb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eV9-Vh-oR1" secondAttribute="bottom" constant="79" id="8os-T0-Tc9"/>
+                            <constraint firstItem="eV9-Vh-oR1" firstAttribute="top" secondItem="qjR-vk-uXF" secondAttribute="bottom" constant="27" id="BmJ-XV-ILN"/>
+                            <constraint firstAttribute="trailing" secondItem="qjR-vk-uXF" secondAttribute="trailing" constant="84" id="DOq-Pp-mdC"/>
+                            <constraint firstItem="qjR-vk-uXF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="83" id="HFd-iW-OfG"/>
+                            <constraint firstAttribute="trailing" secondItem="eV9-Vh-oR1" secondAttribute="trailing" constant="84" id="Ohx-cC-njz"/>
+                            <constraint firstItem="YIc-XM-SDr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eet-Dp-2Xq"/>
+                            <constraint firstItem="YIc-XM-SDr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jQX-Hh-4d8"/>
+                            <constraint firstAttribute="trailing" secondItem="YIc-XM-SDr" secondAttribute="trailing" id="n3J-Li-GhO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSelectPhotoClicked" destination="qjR-vk-uXF" id="0Wq-Wl-EZk"/>
+                        <outlet property="personPic" destination="YIc-XM-SDr" id="lSN-oR-55Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7XK-bz-lfl">
+            <objects>
+                <viewController id="lvF-p4-uVO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PET-31-7Jn"/>
+                        <viewControllerLayoutGuide type="bottom" id="HyZ-0O-sGT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iSD-yE-foI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbX-ys-5pI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dravid-samit-anvay_1460450495.jpg" width="620" height="387"/>
+    </resources>
+</document>
